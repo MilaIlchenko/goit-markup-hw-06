@@ -24,6 +24,8 @@
     />
     <!-- Our stylesheet -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
   </head>
   <body>
     <!-- PAGE HEADER -->
@@ -61,6 +63,11 @@
             </li>
           </ul>
         </address>
+        <button class="mobile-open-btn">
+          <svg class="mobile-open-btn-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -72,7 +79,7 @@
           <button class="order-service-btn" type="button">Order Service</button>
         </div>
       </section>
-      <!-- OUR BENEFITS -->
+
       <section class="benefits" id="benefits">
         <div class="container">
           <h2 class="visually-hidden">About us</h2>
@@ -128,19 +135,20 @@
           </ul>
         </div>
       </section>
-      <!-- OUR TEAM section3-->
+
       <section class="team">
         <div class="container">
           <h2 class="team-section-title">Our Team</h2>
           <ul class="team-members list">
             <li class="team-card">
               <img
-                class="team-members-img"
+                srcset="./images/image1.jpg 1x, ./images/image1-2x.jpg 2x"
                 src="./images/image1.jpg"
                 alt="Product Designer"
                 width="264"
                 height="260"
               />
+
               <div class="team-text-wrap">
                 <h3 class="team-members-title">Mark Guerrero</h3>
                 <p class="team-members-position">Product Designer</p>
@@ -178,12 +186,13 @@
             </li>
             <li class="team-card">
               <img
-                class="team-members-img"
+                srcset="./images/image2.jpg 1x, ./images/image2-2x.jpg 2x"
                 src="./images/image2.jpg"
                 alt="Frontend Developer"
                 width="264"
                 height="260"
               />
+
               <div class="team-text-wrap">
                 <h3 class="team-members-title">Tom Ford</h3>
                 <p class="team-members-position">Frontend Developer</p>
@@ -221,12 +230,13 @@
             </li>
             <li class="team-card">
               <img
-                class="team-members-img"
+                srcset="./images/image3.jpg 1x, ./images/image3-2x.jpg 2x"
                 src="./images/image3.jpg"
                 alt="Marketing"
                 width="264"
                 height="260"
               />
+
               <div class="team-text-wrap">
                 <h3 class="team-members-title">Camila Garcia</h3>
                 <p class="team-members-position">Marketing</p>
@@ -264,12 +274,13 @@
             </li>
             <li class="team-card">
               <img
-                class="team-members-img"
+                srcset="./images/image4.jpg 1x, ./images/image4-2x.jpg 2x"
                 src="./images/image4.jpg"
                 alt="UI Designer"
                 width="264"
                 height="260"
               />
+
               <div class="team-text-wrap">
                 <h3 class="team-members-title">Daniel Wilson</h3>
                 <p class="team-members-position">UI Designer</p>
@@ -315,13 +326,47 @@
           <ul class="our-portfolio list">
             <li class="portfolio-item">
               <div class="img-section-f">
+                <picture>
+                  <!-- Desktop screen -->
+
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/BankingApp.jpg    1x,
+                      ./images/imagesportfolio/portfolio/BankingApp-2x.jpg 2x
+                    "
+                    type="BankingApp"
+                  />
+                  <!-- Tablet screen -->
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/BankingApp-tab-1x.jpg 1x,
+                      ./images/imagesportfolio/portfolio/BankingApp-tab-2x.jpg 2x
+                    "
+                    type="BankingApp"
+                  />
+                  <!-- Mobile screen -->
+
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/BankingApp-mob-1x.jpg 1x,
+                      ./images/imagesportfolio/portfolio/BankingApp-mob-2x.jpg 2x
+                    "
+                    type="BankingApp"
+                  />
+                </picture>
                 <img
-                  class="img"
+                  class="card-img"
                   src="./images/imagesportfolio/portfolio/BankingApp.jpg"
                   alt="BankingApp"
                   width="360"
                   height="300"
+                  loading="lazy"
                 />
+
                 <p class="text-img">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -335,6 +380,38 @@
             </li>
             <li class="portfolio-item">
               <div class="img-section-f">
+                <picture>
+                  <!-- Desktop screen -->
+
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/CashlessPayment.jpg    1x,
+                      ./images/imagesportfolio/portfolio/CashlessPayment-2x.jpg 2x
+                    "
+                    type="CashlessPayment"
+                  />
+                  <!-- Tablet screen -->
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/CashlessPayment-tab-1x.jpg 1x,
+                      ./images/imagesportfolio/portfolio/CashlessPayment-2x.jpg     2x
+                    "
+                    type="CashlessPayment"
+                  />
+                  <!-- Mobile screen -->
+
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/CashlessPayment-mob-1x.jpg 1x,
+                      ./images/imagesportfolio/portfolio/CashlessPayment-mob-2x.jpg 2x
+                    "
+                    type="CashlessPayment"
+                  />
+                </picture>
                 <img
                   class="img"
                   src="./images/imagesportfolio/portfolio/CashlessPayment.jpg"
@@ -355,6 +432,39 @@
             </li>
             <li class="portfolio-item">
               <div class="img-section-f">
+                <picture>
+                  <!-- Desktop screen -->
+
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/MeditationApp.jpg    1x,
+                      ./images/imagesportfolio/portfolio/MeditationApp-2x.jpg 2x
+                    "
+                    type="MeditationApp"
+                  />
+                  <!-- Tablet screen -->
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/MeditationApp-tab-1x.jpg 1x,
+                      ./images/imagesportfolio/portfolio/MeditationApp-tab-2x.jpg 2x
+                    "
+                    type="MeditationApp"
+                  />
+                  <!-- Mobile screen -->
+
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/MeditationApp-mob-1x.jpg 1x,
+                      ./images/imagesportfolio/portfolio/MeditationApp-mob-2x.jpg 2x
+                    "
+                    type="MeditationApp"
+                  />
+                </picture>
+
                 <img
                   class="img"
                   src="./images/imagesportfolio/portfolio/MeditationApp.jpg"
@@ -375,6 +485,38 @@
             </li>
             <li class="portfolio-item">
               <div class="img-section-f">
+                <picture>
+                  <!-- Desktop screen -->
+
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/TaxiService.jpg    1x,
+                      ./images/imagesportfolio/portfolio/TaxiService-2x.jpg 2x
+                    "
+                    type="TaxiService"
+                  />
+                  <!-- Tablet screen -->
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/TaxiService-tab-1x.jpg 1x,
+                      ./images/imagesportfolio/portfolio/TaxiService-tab-2x.jpg 2x
+                    "
+                    type="TaxiService"
+                  />
+                  <!-- Mobile screen -->
+
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/TaxiService-mob-1x.jpg 1x,
+                      ./images/imagesportfolio/portfolio/TaxiService-mob-2x.jpg 2x
+                    "
+                    type="TaxiService"
+                  />
+                </picture>
                 <img
                   class="img"
                   src="./images/imagesportfolio/portfolio/TaxiService.jpg"
@@ -395,6 +537,38 @@
             </li>
             <li class="portfolio-item">
               <div class="img-section-f">
+                <picture>
+                  <!-- Desktop screen -->
+
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/ScreenIllustrations.jpg    1x,
+                      ./images/imagesportfolio/portfolio/ScreenIllustrations-2x.jpg 2x
+                    "
+                    type="ScreenIllustrations"
+                  />
+                  <!-- Tablet screen -->
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/ScreenIllustrations-tab-1x.jpg 1x,
+                      ./images/imagesportfolio/portfolio/ScreenIllustrations-tab-2x.jpg 2x
+                    "
+                    type="ScreenIllustrations"
+                  />
+                  <!-- Mobile screen -->
+
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/ScreenIllustrations-mob-1x.jpg 1x,
+                      ./images/imagesportfolio/portfolio/ScreenIllustrations-mob-2x.jpg 2x
+                    "
+                    type="ScreenIllustrations"
+                  />
+                </picture>
                 <img
                   class="img"
                   src="./images/imagesportfolio/portfolio/ScreenIllustrations.jpg"
@@ -416,6 +590,38 @@
             </li>
             <li class="portfolio-item">
               <div class="img-section-f">
+                <picture>
+                  <!-- Desktop screen -->
+
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/OnlineCourses.jpg    1x,
+                      ./images/imagesportfolio/portfolio/OnlineCourses-2x.jpg 2x
+                    "
+                    type="OnlineCourses"
+                  />
+                  <!-- Tablet screen -->
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/OnlineCourses-tab-1x.jpg 1x,
+                      ./images/imagesportfolio/portfolio/OnlineCourses-tab-2x.jpg 2x
+                    "
+                    type="OnlineCourses"
+                  />
+                  <!-- Mobile screen -->
+
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/imagesportfolio/portfolio/OnlineCourses-mob-1x.jpg 1x,
+                      ./images/imagesportfolio/portfolio/OnlineCourses-mob-2x.jpg 2x
+                    "
+                    type="OnlineCourses"
+                  />
+                </picture>
                 <img
                   class="img"
                   src="./images/imagesportfolio/portfolio/OnlineCourses.jpg"
@@ -506,7 +712,7 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-open">
+    <div class="backdrop">
       <div class="modal">
         <button
           class="modal-close-btn"
@@ -604,6 +810,58 @@
           </div>
           <button class="review-form-btn" type="submit">Send</button>
         </form>
+      </div>
+    </div>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu is-open">
+      <div class="container mobile-menu-container">
+        <button class="mobile-menu-close-btn" type="button">
+          <svg class="mobile-menu-close-btn-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="mobile-link-wrapper">
+          <div class="mobile-nav-container">
+            <nav class="mobile-nav">
+              <ul class="mobile-menu-nav-list list">
+                <li class="mobile-menu-item">
+                  <a
+                    class="mobile-menu-link link mobile-menu-current-page"
+                    href="./index.html"
+                    >Studio</a
+                  >
+                </li>
+                <li class="mobile-menu-item">
+                  <a class="mobile-menu-link link" href="">Portfolio</a>
+                </li>
+                <li class="mobile-menu-item">
+                  <a class="mobile-menu-link link" href="">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="contact-social-wrapper">
+            <address class="mobile-contact">
+              <ul class="mobile-contact-list list">
+                <li class="mobile-contact-item">
+                  <a
+                    class="mobile-contact-link mobile-contact-link-tel link"
+                    href="tel:+110001111111"
+                    target="_blank"
+                    >+11 (000) 111-11-11
+                  </a>
+                </li>
+                <li class="mobile-contact-item">
+                  <a
+                    class="mobile-contact-link link"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+        </div>
       </div>
     </div>
   </body>
