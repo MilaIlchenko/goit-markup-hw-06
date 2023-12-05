@@ -769,7 +769,7 @@ color: #404bbf;
 
 /* ============== MODAL WINDOW STYLES ============== */
 
-.modal {
+.modal.is-open {
   position: absolute;
   top: 50%;
   left: 50%;
