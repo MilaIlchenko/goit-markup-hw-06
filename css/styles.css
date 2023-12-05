@@ -759,7 +759,7 @@ color: #404bbf;
   visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop {
+.backdrop.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
